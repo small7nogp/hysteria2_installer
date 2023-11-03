@@ -2,7 +2,7 @@
 
 export LANG=en_US.UTF-8
 
-installScriptUrl = "https://raw.githubusercontent.com/small7nogp/p-r-o-x-y-scripts/main/install_hysteria2.sh"
+installScriptUrl="https://raw.githubusercontent.com/small7nogp/p-r-o-x-y-scripts/main/install_hysteria2.sh"
 
 RED="\033[31m"
 GREEN="\033[32m"
@@ -224,7 +224,7 @@ insthysteria(){
     fi
     ${PACKAGE_INSTALL} curl wget sudo qrencode procps iptables-persistent netfilter-persistent
 
-    wget -N $installScriptUrl
+    wget -N https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/install_server.sh
     bash install_server.sh
     rm -f install_server.sh
 
@@ -528,7 +528,7 @@ showconf(){
 }
 
 update_core(){
-    wget -N https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/install_server.sh
+    wget -N $installScriptUrl
     bash install_server.sh
     rm -f install_server.sh
 }
