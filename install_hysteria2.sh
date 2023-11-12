@@ -32,8 +32,8 @@ CONFIG_DIR="/etc/hysteria"
 # URLs of GitHub
 # REPO_URL="https://github.com/apernet/hysteria"
 # API_BASE_URL="https://api.github.com/repos/apernet/hysteria"
-REPO_URL="https://github.com/small7nogp/h-y-s-t-e-r-i-a"
-API_BASE_URL="https://api.github.com/repos/small7nogp/h-y-s-t-e-r-i-a"
+REPO_URL="https://github.com/small7nogp/hysteria"
+API_BASE_URL="https://api.github.com/repos/small7nogp/hysteria"
 
 # curl command line flags.
 # To using a proxy, please specify ALL_PROXY in the environ variable, such like:
