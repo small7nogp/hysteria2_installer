@@ -240,7 +240,7 @@ EOF
 	# 检查运行是否正常
 	read -rp "稍后会输出caddy日志，请检查是否正常工作。按任意按键继续，确认无误后按ctrl-c退出日志输出。"
 	trap interrupt_handler SIGINT
-	sh -c "journalctl -u caddy -f"
+	sh -c "journalctl -u caddy-proxy -f"
 
     green "NaiveProxy 已安装成功！"
     showconf
