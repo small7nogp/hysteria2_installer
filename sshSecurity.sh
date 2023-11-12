@@ -33,12 +33,12 @@ changeSsh(){
 	if [ -f /etc/ssh/sshd_config ]; then
 		# 端口修改
 		read -rp "请输入ssh端口【默认随机】：" sshport
-		[[ -z $sshport ]] && sshport=$(shuf -i 2000-65535 -n 1)
+		[[ -z $sshport ]] && sshport=$(shuf -i 10000-65535 -n 1)
 		until [[ -z $(ss -ntlp | awk '{print $4}' | sed 's/.*://g' | grep -w "$sshport") ]]; do
 			if [[ -n $(ss -ntlp | awk '{print $4}' | sed 's/.*://g' | grep -w "$sshport") ]]; then
 				echo -e "${sshport} 端口已经被其他程序占用，请更换端口重试！"
 				read -rp "请输入ssh端口【默认随机】：" sshport
-				[[ -z $proxyport ]] && sshport=$(shuf -i 2000-65535 -n 1)
+				[[ -z $sshport ]] && sshport=$(shuf -i 10000-65535 -n 1)
 			fi
 		done
 		
