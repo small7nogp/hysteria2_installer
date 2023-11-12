@@ -71,12 +71,10 @@ getTlsConfig(){
 	
 	if [[ $tlstype == "2" ]]; then
 		read -rp "请输入tls cloudflare token：" tlsCloudflareToken
-		echo <<EOF
-	tls {
-		dns  cloudflare $tlsCloudflareToken
-		resolvers 1.1.1.1
-	}
-EOF
+		echo "tls {"
+		echo "dns  cloudflare ${tlsCloudflareToken}"
+		echo "resolvers 1.1.1.1"
+		echo "}"
 	fi
 }
 
@@ -148,7 +146,7 @@ installProxy(){
     yellow "使用在 NaiveProxy 节点的伪装网站为：$proxysite"
 	
 	# 处理tls相关部分
-	green "1 自动申请（文件）"
+	green "1 自动申请（功能暂不可用，需要80端口可访问）"
 	green "2 自动申请（CLOUDFLARE)"
 	read -rp "选择tls类型：" tlstype
 	tlsconfig="$(getTlsConfig ${tlstype})"
