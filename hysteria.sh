@@ -2,7 +2,7 @@
 
 export LANG=en_US.UTF-8
 
-installScriptUrl="https://raw.githubusercontent.com/small7nogp/p-r-o-x-y-scripts/main/install_hysteria2.sh"
+installScriptUrl="https://raw.githubusercontent.com/small7nogp/proxyscripts/main/install_hysteria2.sh"
 
 RED="\033[31m"
 GREEN="\033[32m"
