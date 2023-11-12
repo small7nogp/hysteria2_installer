@@ -12,7 +12,7 @@ addUser(){
 	
 	read -rp "请输入密码【默认随机】：" password
     [[ -z $password ]] && password=$(date +%s%N | md5sum | cut -c 1-16)
-	echo "${username}:{$password}" | chpasswd
+	echo "${username}:${password}" | chpasswd
 	
 	if [ $? -ne 0 ]; then
 		echo "设置密码失败！"
