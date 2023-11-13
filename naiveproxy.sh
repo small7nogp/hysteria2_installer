@@ -153,6 +153,7 @@ installProxy(){
     
     caddyfile=$(cat << EOF
 {
+  admin off
   http_port $httpport
   https_port $proxyport
   order forward_proxy before reverse_proxy
